@@ -1,0 +1,39 @@
+﻿@page
+@model Lab2.Pages.UpdateModel
+@{
+    ViewData["Title"] = "Изменение элемента";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Изменение элемента</h1>
+</div>
+
+<form method = "post">
+    <div class = "form-group">
+		<label for = "Title">Название</label>
+			<input id = "Title" name = "title" type = "text" value = "@Model.Title" required />
+	</div>
+
+	<div class = "form-group">
+	   <p><select size="4" name="types[]">
+			<option disabled>Выберите тип</option>
+			<option selected = "@(Model.Type == "Imperative")" value="Imperative">Imperative</option>
+			<option selected = "@(Model.Type == "Functional")" value="Functional">Functional</option>
+			<option selected = "@(Model.Type == "Other")" value="Other">Other</option>
+   </select></p>
+   </div>
+
+	<div class = "form-group">
+		<label for = "Rate">Рейтинг</label>
+			<input id = "Rate" name = "rate" type = "number" value = "@Model.Rate" required />
+	</div>
+
+	<div class="form-group">
+			<button type="submit">Сохранить</button>
+	</div>
+
+</form>
+
+<form method = "get">
+	<a asp-page = "/Index">Назад</a>
+</form>

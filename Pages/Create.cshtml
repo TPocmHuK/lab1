@@ -1,0 +1,36 @@
+﻿@page
+@model Lab2.Pages.CreateModel
+@{
+    ViewData["Title"] = "Добавление элемента";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Добавление элемента</h1>
+</div>
+
+<form method = "post">
+    <div class = "form-group">
+		<label for = "Title">Название</label>
+			<input id = "Title" name = "title" type = "text" value = "@Model.Title" required />
+   </div>
+
+   <div class = "form-group">
+	   <p><select size="3" multiple name="types[]">
+			<option disabled>Выберите тип</option>
+			<option selected value="Imperative">Imperative</option>
+			<option value="Functional">Functional</option>
+			<option value="Other">Other</option>
+		</select></p>
+   </div>
+
+   <div class = "form-group">
+		<label for = "Rate">Рейтинг</label>
+			<input id = "Rate" name = "rate" type = "number" value = "@Model.Rate" required />
+	</div>
+
+	<div class="form-group">
+			<button type="submit">Сохранить</button>
+	</div>
+
+	<a asp-page = "/Index">Назад</a>
+</form>

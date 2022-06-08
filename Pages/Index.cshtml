@@ -1,0 +1,25 @@
+﻿@page
+@using Lab2.Data
+@model IndexModel
+@{
+    ViewData["Title"] = "Языки программирования";
+}
+
+<h2>Языки программирования</h2>
+<table class="table">
+    <tr><td>Title</td><td>Type</td><td>Rate</td><td></td><td></td></tr>
+    @foreach(DataList dataList in Model.Items)
+    {
+        <tr>
+            <td>@dataList.Title</td>
+            <td>@dataList.Type</td>
+            <td>@dataList.Rate</td>
+            <td><a asp-page = "/Delete" asp-route-guid = "@dataList.Id">Удалить</a></td>
+            <td><a asp-page = "/Update" asp-route-guid = "@dataList.Id">Редактирование</a></td>
+        </tr>
+    }
+</table>
+
+<a asp-page = "/Create">
+Добавить    
+</a>

@@ -1,0 +1,20 @@
+[
+  {
+    "Id": "8365cde2-d35a-4412-86bf-6a509fec64d3",
+    "Title": "C#",
+    "Type": "Imperative",
+    "Rate": 1
+  },
+  {
+    "Id": "397daf84-07a9-4e19-89f4-e8b98ea986ca",
+    "Title": "wdfqwfd",
+    "Type": "Functional",
+    "Rate": 333
+  },
+  {
+    "Id": "b78e8329-4021-45e8-b78b-ee7f185a222d",
+    "Title": "dwqdq",
+    "Type": "Other",
+    "Rate": 334555
+  }
+]
